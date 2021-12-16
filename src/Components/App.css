@@ -1,7 +1,30 @@
-.App {
-  text-align: center;
+/* .App {
+top: 30px;
+position: relative;
+} */
+
+.text-area{  
+  background: chartreuse;
 }
 
+.cate{
+  margin-bottom: 10px;
+}
+
+.new-margin{
+}
+
+/* .text-input{
+width: 100%;
+}
+
+.cate{
+  display:flex;
+  align-items: center;
+  flex-flow: column nowrap;
+} */
+
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +58,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
