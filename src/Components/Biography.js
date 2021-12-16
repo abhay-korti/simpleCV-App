@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Display from './Display_Bio';
+import BioDisp from './Display_Bio';
 import './App.css'
 import Inputfield from './Inputfield';
 
@@ -38,12 +38,12 @@ class Biography extends Component {
         return (
             <div>
                 <Inputfield type="text" dispText="First Name" newData="fname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="Role" newData="lname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="From" newData="email" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="To" newData="telly" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="To" newData="crole" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="text" dispText="Last Name" newData="lname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="text" dispText="Email" newData="email" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="text" dispText="Tel" newData="telly" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="text" dispText="Current Role" newData="crole" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="textarea" dispText="Small Bio" newData="expBio" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Display bio={this.state} />
+                <BioDisp bio={this.state} />
             </div>
         )
     }

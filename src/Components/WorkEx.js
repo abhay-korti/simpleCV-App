@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Inputfield from './Inputfield'
-import Display from './Display_Bio'
+import WorkDisp from './Display_WorkEx'
 import './App.css'
 
 class WorkEx extends Component {
@@ -38,6 +38,7 @@ class WorkEx extends Component {
                 <Inputfield type="text" dispText="From" newData="expFrom" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="text" dispText="To" newData="expTo" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="textarea" dispText="Small Bio" newData="expBio" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
+                <WorkDisp bio={this.state} />
             </div>
         )
     }

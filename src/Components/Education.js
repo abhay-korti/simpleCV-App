@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Inputfield from './Inputfield'
 import './App.css'
+import EducDisp from './Display_Educ'
 
 class Education extends Component {
     constructor(props) {
@@ -38,6 +39,7 @@ class Education extends Component {
                 <Inputfield type="text" dispText="From" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="text" dispText="To" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="textarea" dispText="Small Bio" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
+                <EducDisp bio={this.state} />
             </div>
         )
     }
