@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Biography from "./Biography";
+import './App.css'
 
 export default class Buttons extends Component {
     constructor(props) {

@@ -8,7 +8,7 @@ class Headings extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="title-headings">
                 <h2>{this.props.heading}</h2>
             </div>
         )

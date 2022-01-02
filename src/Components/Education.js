@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Inputfield from './Inputfield'
 import './App.css'
-import EducDisp from './Display_Educ'
+
 
 class Education extends Component {
     constructor(props) {
@@ -9,7 +9,7 @@ class Education extends Component {
         this.state = {
             id: '',
             values: {
-                eduName: '',
+                eduCname: '',
                 eduDeg: '',
                 eduFrom: '',
                 eduTo: '',
@@ -20,26 +20,23 @@ class Education extends Component {
     }
 
     onUpdate(value, x) {
-        console.log(value, x)
         this.setState({
             id: this.props.indy,
             values: {
                 ...this.state.values,
                 [x]: value
             }
-        })
-        console.log(this.state);
+        }, () => this.props.func2(this.state, 'eduObj', this.props.indy));
     }
 
     render() {
         return (
-            <div>
+            <div className='divWrap'>
                 <Inputfield type="text" dispText="School/University" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="Degree/Diploma" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="From" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="To" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="textarea" dispText="Small Bio" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
-                <EducDisp bio={this.state} />
+                <Inputfield type="text" dispText="Degree/Diploma" cat="education" newData="eduDeg" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="text" dispText="From" cat="education" newData="eduFrom" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="text" dispText="To" cat="education" newData="eduTo" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="textarea" dispText="Small Bio" cat="education" newData="eduBio" id={`${this.props.indy}`} func={this.onUpdate} />
             </div>
         )
     }

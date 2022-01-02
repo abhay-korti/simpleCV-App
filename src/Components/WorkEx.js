@@ -20,25 +20,22 @@ class WorkEx extends Component {
     }
 
     onUpdate(value, x) {
-        console.log(value, x)
         this.setState({
             id: this.props.indy,
             values: {
                 ...this.state.values,
                 [x]: value
             }
-        })
-        console.log(this.state);
+        }, () => this.props.func2(this.state, 'expObj', this.props.indy));
     }
     render() {
         return (
-            <div>
+            <div className='divWrap'>
                 <Inputfield type="text" dispText="Company Name" newData="expCname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="text" dispText="Role" newData="expCrole" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="text" dispText="From" newData="expFrom" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="text" dispText="To" newData="expTo" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
                 <Inputfield type="textarea" dispText="Small Bio" newData="expBio" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <WorkDisp bio={this.state} />
             </div>
         )
     }
