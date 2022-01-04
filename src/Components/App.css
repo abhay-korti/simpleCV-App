@@ -41,7 +41,7 @@ body{
   position: relative;
   left: 10px;
   width:40%;
-  border:3px red solid;
+  border:1px black solid;
   border-radius:1%;
   display:flex;
   flex-flow:column nowrap;
@@ -57,7 +57,7 @@ textarea, input{
   padding: 24px;
   font-size: 14px;
   color:rgb(0, 0, 0);
-  border-radius: 3%;
+  border-radius: 1%;
 }
 
 input:focus::placeholder{
@@ -104,7 +104,7 @@ button{
 .display-wrapper{
   height: fit-content;
   width: 40%;
-  border: 2px blue solid;
+  border: 2px black solid;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 

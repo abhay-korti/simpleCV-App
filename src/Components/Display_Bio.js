@@ -6,12 +6,13 @@ export default class BioDisp extends Component {
         super(props)
     }
 
+
     render() {
         console.log(this.props);
         return (
             <div>
                 <div className='bio-wrapper'>
-                    <div class="bio-one">
+                    <div className="bio-one">
                         <h2 className='mainheadings'>{`${this.props.bio.values.fname || ""} ${this.props.bio.values.lname || ""}`}</h2>
                         <div className='role'>{`${this.props.bio.values.crole || ""}`}</div>
                     </div>

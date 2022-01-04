@@ -7,7 +7,7 @@ class WorkEx extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: '',
+            id: '0',
             values: {
                 expCname: '',
                 expCrole: '',
@@ -31,11 +31,11 @@ class WorkEx extends Component {
     render() {
         return (
             <div className='divWrap'>
-                <Inputfield type="text" dispText="Company Name" newData="expCname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="Role" newData="expCrole" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="From" newData="expFrom" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="To" newData="expTo" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="textarea" dispText="Small Bio" newData="expBio" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="text" dispText="Company Name" newData="expCname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.expCname} />
+                <Inputfield type="text" dispText="Role" newData="expCrole" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.expCrole} />
+                <Inputfield type="text" dispText="From" newData="expFrom" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.expFrom} />
+                <Inputfield type="text" dispText="To" newData="expTo" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.expTo} />
+                <Inputfield type="textarea" dispText="Small Bio" newData="expBio" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.expBio} />
             </div>
         )
     }

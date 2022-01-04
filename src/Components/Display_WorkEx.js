@@ -15,23 +15,14 @@ export default class WorkDisp extends Component {
                     {this.heading}
                 </div>
                 <div>
-                    <h2>{`${this.props.bio.values.expCname}`}</h2>
-                    <div>{`${this.props.bio.values.expFrom} - ${this.props.bio.values.expTo}`}</div>
-                    <div>{`${this.props.bio.values.expCrole}`}</div>
-                    <div>{`${this.props.bio.values.expBio}`}</div>
+                    <h2>{`${this.props.bio.values.expCname || ''}`}</h2>
+                    <div>{`${this.props.bio.values.expFrom || ''} - ${this.props.bio.values.expTo || ''}`}</div>
+                    <div>{`${this.props.bio.values.expCrole || ''}`}</div>
+                    <div>{`${this.props.bio.values.expBio || ''}`}</div>
                 </div>
             </div>
         )
     }
-    // else {
-    //     return (
-    //         <div>
-    //             <h2>{`${this.props.bio.values.expFrom} - ${this.props.bio.values.expTo}`}</h2>
-    //             <div>{`${this.props.bio.values.expCname}`}</div>
-    //             <div>{`${this.props.bio.values.expCrole}`}</div>
-    //             <div>{`${this.props.bio.values.expBio}`}</div>
-    //         </div>
-    //     )
-    // }
+
 }
 

@@ -32,11 +32,11 @@ class Education extends Component {
     render() {
         return (
             <div className='divWrap'>
-                <Inputfield type="text" dispText="School/University" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="Degree/Diploma" cat="education" newData="eduDeg" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="From" cat="education" newData="eduFrom" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="text" dispText="To" cat="education" newData="eduTo" id={`${this.props.indy}`} func={this.onUpdate} />
-                <Inputfield type="textarea" dispText="Small Bio" cat="education" newData="eduBio" id={`${this.props.indy}`} func={this.onUpdate} />
+                <Inputfield type="text" dispText="School/University" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.eduCname} />
+                <Inputfield type="text" dispText="Degree/Diploma" cat="education" newData="eduDeg" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.eduDeg} />
+                <Inputfield type="text" dispText="From" cat="education" newData="eduFrom" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.eduFrom} />
+                <Inputfield type="text" dispText="To" cat="education" newData="eduTo" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.eduTo} />
+                <Inputfield type="textarea" dispText="Small Bio" cat="education" newData="eduBio" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.eduBio} />
             </div>
         )
     }
