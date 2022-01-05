@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import './App.css'
+import './App.scss'
+
 class Inputfield extends Component {
     constructor(props) {
         super(props);

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import './App.css'
+import './App.scss'
 import Inputfield from './Inputfield';
-
 
 
 class Biography extends Component {
@@ -20,6 +19,7 @@ class Biography extends Component {
                 location: '',
             }
         }
+        this.counter = 0;
 
         this.onUpdate = this.onUpdate.bind(this);
     }
@@ -39,16 +39,19 @@ class Biography extends Component {
 
 
     render() {
-        console.log(this.props.example);
+        if (this.props.example != undefined && this.counter < this.props.exCounter) {
+            this.state = this.props.example;
+            this.counter = this.counter + 1;
+        }
         return (
             <div className='divWrap'>
-                <Inputfield type="text" dispText="First Name" newData="fname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.fname} />
-                <Inputfield type="text" dispText="Last Name" newData="lname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.lname} />
-                <Inputfield type="text" dispText="Email" newData="email" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.email} />
-                <Inputfield type="text" dispText="Tel" newData="telly" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.telly} />
-                <Inputfield type="text" dispText="Current Role" newData="crole" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.crole} />
-                <Inputfield type="text" dispText="Location" newData="location" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.location} />
-                <Inputfield type="textarea" dispText="Small Bio" newData="bioBio" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.bioBio} />
+                <Inputfield type="text" dispText="First Name" newData="fname" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.fname} />
+                <Inputfield type="text" dispText="Last Name" newData="lname" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.lname} />
+                <Inputfield type="text" dispText="Email" newData="email" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.email} />
+                <Inputfield type="text" dispText="Tel" newData="telly" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.telly} />
+                <Inputfield type="text" dispText="Current Role" newData="crole" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.crole} />
+                <Inputfield type="text" dispText="Location" newData="location" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.location} />
+                <Inputfield type="textarea" dispText="Small Bio" newData="bioBio" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.bioBio} />
             </div>
         )
     }

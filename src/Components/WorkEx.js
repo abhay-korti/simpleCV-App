@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Inputfield from './Inputfield'
 import WorkDisp from './Display_WorkEx'
-import './App.css'
+import './App.scss'
 
 class WorkEx extends Component {
     constructor(props) {
@@ -16,6 +16,7 @@ class WorkEx extends Component {
                 expBio: '',
             },
         }
+        this.counter = 0;
         this.onUpdate = this.onUpdate.bind(this);
     }
 
@@ -29,6 +30,10 @@ class WorkEx extends Component {
         }, () => this.props.func2(this.state, 'expObj', this.props.indy));
     }
     render() {
+        if (this.props.example != undefined && this.counter < this.props.exCounter) {
+            this.state = this.props.example;
+            this.counter = this.counter + 1;
+        }
         return (
             <div className='divWrap'>
                 <Inputfield type="text" dispText="Company Name" newData="expCname" cat="experience" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.expCname} />

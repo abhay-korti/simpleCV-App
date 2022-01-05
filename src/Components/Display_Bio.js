@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import './App.css'
+import './App.scss'
 
 export default class BioDisp extends Component {
     constructor(props) {
         super(props)
     }
-
 
     render() {
         console.log(this.props);

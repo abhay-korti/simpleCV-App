@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Inputfield from './Inputfield'
-import './App.css'
+import './App.scss'
 
 
 class Education extends Component {
@@ -16,6 +16,7 @@ class Education extends Component {
                 eduBio: '',
             },
         }
+        this.counter = 0;
         this.onUpdate = this.onUpdate.bind(this);
     }
 
@@ -30,6 +31,10 @@ class Education extends Component {
     }
 
     render() {
+        if (this.props.example != undefined && this.counter < this.props.exCounter) {
+            this.state = this.props.example;
+            this.counter = this.counter + 1;
+        }
         return (
             <div className='divWrap'>
                 <Inputfield type="text" dispText="School/University" cat="education" newData="eduCname" id={`${this.props.indy}`} func={this.onUpdate} exampleVal={this.state.values.eduCname} />

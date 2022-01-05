@@ -2,7 +2,7 @@ import Biography from './Biography';
 import WorkEx from './WorkEx';
 import Headings from './Headings';
 import Buttons from './Buttons';
-import "./App.css"
+import './App.scss'
 import { Component } from 'react';
 import Education from './Education';
 import BioDisp from './Display_Bio';
@@ -22,6 +22,7 @@ class App extends Component {
       eduObj: [],
       expObj: [],
     }
+    this.exampleCounter = 0;
     this.onAdd = this.onAdd.bind(this);
     this.OnDel = this.onDel.bind(this);
     this.settingState = this.settingState.bind(this);
@@ -107,7 +108,9 @@ class App extends Component {
     this.settingState(exampleObj.eduObj[1], 'eduObj', 1);
     this.settingState(exampleObj.expObj[0], 'expObj', 0);
     this.settingState(exampleObj.expObj[1], 'expObj', 1);
+    this.exampleCounter = this.exampleCounter + 1;
   }
+
 
 
 
@@ -133,6 +136,8 @@ class App extends Component {
     })
   }
 
+
+
   render() {
     return (
       <div className="main-wrapper">
@@ -143,7 +148,7 @@ class App extends Component {
             {this.state.bioCount.map((element, index) => {
               return (
                 <div className={`cate ${this.state.newClass}`} key={index}>
-                  <Biography indy={index} func2={this.settingState} example={this.state.bioObj[index]} />
+                  <Biography indy={index} func2={this.settingState} example={this.state.bioObj[index]} exCounter={this.exampleCounter} />
                 </div>
               )
             })}
@@ -151,7 +156,7 @@ class App extends Component {
             {this.state.workExCount.map((element, index) => {
               return (
                 <div className={`cate ${this.state.newClass}`} key={index}>
-                  <WorkEx indy={index} func2={this.settingState} example={this.state.expObj[index]} />
+                  <WorkEx indy={index} func2={this.settingState} example={this.state.expObj[index]} exCounter={this.exampleCounter} />
                 </div>
               )
             })}
@@ -160,7 +165,7 @@ class App extends Component {
             {this.state.eduCount.map((element, index) => {
               return (
                 <div className={`cate ${this.state.newClass}`} key={index}>
-                  <Education indy={index} func2={this.settingState} example={this.state.eduObj[index]} />
+                  <Education indy={index} func2={this.settingState} example={this.state.eduObj[index]} exCounter={this.exampleCounter} />
                 </div>
               )
             })}
