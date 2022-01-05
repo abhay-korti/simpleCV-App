@@ -19,6 +19,9 @@ code {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+$main-color:rgb(31, 70, 177);
+
+
 body{
   background: rgb(226, 235, 236);
   font-family: 'Montserrat', sans-serif;
@@ -33,12 +36,12 @@ body{
 .main-header{
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  color: rgb(31, 70, 177);
+  color: $main-color;
   font-size: 8vh;
 }
 
 .title-headings{
-  color:rgb(31, 70, 177);
+  color:$main-color;
   font-size: 4vh;
   margin-bottom:8px;
 
@@ -90,7 +93,7 @@ button{
   border: none;
   padding: 24px;
   margin-right:16px;
-  background: rgba(90, 49, 49, 0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .divWrap{
@@ -98,19 +101,6 @@ button{
   display:flex;
   flex-flow:column nowrap;
 }
-
-
-@media screen and (max-width:900px){
-  .total-wrapper{
-    flex-flow:column nowrap;
-  }
-
-  .App{
-    width:25%;
-  }
-
-}
-
 
 .display-wrapper{
   height: fit-content;
@@ -156,3 +146,18 @@ button{
 .total-bottom{
   margin: 1em 0.5em 1em 0.5em;
 }
+
+
+
+@media screen and (max-width:900px){
+  .total-wrapper{
+    flex-flow:column nowrap;
+  }
+
+  .App{
+    width:25%;
+  }
+
+}
+
+
